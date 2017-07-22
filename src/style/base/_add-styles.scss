@@ -63,7 +63,7 @@ button:focus { outline: none; }
 .navbar-toggler.collapsed .icon-bar:nth-of-type(3) {
 	transform: translate3d(0,0,0) rotate(0deg);
 }
-/* END ANIMATED */
+/* END ANIMATED MINUS */
 
 
 // SCROLLING
@@ -79,8 +79,11 @@ button:focus { outline: none; }
 		&::placeholder { color: rgba($black, .6); }  
 	}
 	
-	.btn__search { i { color: rgba($black, .6); } } 
-	.btn__search:hover { i { color: rgba($black, .2); } } 
+	.btn__search { 
+		.icon-search { fill: rgba($black, .6); } 
+		
+		&:hover { .icon-search { fill: rgba($black, .2); } } 
+	}
 }
 
 .fix-t {

@@ -46,16 +46,19 @@
 			padding: 0;
 		}
 		
-		.navbar-nav .nav-item { 
-			border-bottom: 1px solid $gray-lightest;
-			margin-right: 0;
+		.navbar-nav {
+			
+			.nav-item { 
+				border-bottom: 1px solid $gray-lightest;
+				margin-right: 0;
 				
-			&:last-child { border: none; }
+				&:last-child { border: none; }
 				
-			.nav-link {
-				padding: .75em;
-				letter-spacing: .2rem;
-				border: none;
+				.nav-link {
+					padding: .75em;
+					letter-spacing: .2rem;
+					border: none;
+				}
 			}
 		}
 		

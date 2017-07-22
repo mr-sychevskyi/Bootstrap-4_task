@@ -1,14 +1,14 @@
 // BUTTONS_TYPES
 .btn__search {
 	position: absolute;
-	top: 3px;
+	top: 6px;
 	right: 3px;
 
 	background: none;
 	border: none;	
 	
-	i {	
-		color: $white-semitransparent; 
+	.icon-search {	
+		fill: $white-semitransparent; 
 		transition: all .4s;
 	}
 }
@@ -70,9 +70,10 @@
 }
 
 
+
 // BUTTONS_HOVER
 .btn__search:hover {
-	i {	color: $white; }
+	.icon-search {	fill: $white; }
 }
 
 .btn__social:hover {
