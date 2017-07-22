@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     imagemin = require('gulp-imagemin'),
 	jsmin = require('gulp-jsmin'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+	fileinclude = require('gulp-file-include');
 
 
 // Compile sass into CSS 
@@ -33,6 +34,15 @@ gulp.task('jsmin', function () {
         .pipe(gulp.dest('src/js'));
 });
 
+// File include
+gulp.task('fileinclude', function() {
+  gulp.src(['src/build/*.html'])
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
+    .pipe(gulp.dest('src'));
+});
 
 // Move the javascript files into our /src/js folder
 gulp.task('js', function() {
@@ -60,4 +70,4 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('default', ['js','serve']);
 
 // production
-gulp.task('production', ['sass', 'imagemin', 'jsmin']);
+gulp.task('production', ['sass', 'imagemin', 'jsmin', 'fileinclude']);
