@@ -1,0 +1,83 @@
+// BUTTONS_TYPES
+.btn__icon {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+
+	background: none;
+	border: none;	
+	
+	i {	
+		color: $white-semitransparent; 
+		transition: all .4s;
+	}
+}
+
+.btn__like {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	
+	font-size: 0.8rem;
+	
+	background: $white;
+	border: 1px solid darken($gray-lightest, 25%);
+	border-radius: 10px;
+	
+	i { 
+		margin-right: 5px;
+		color: darken($gray-lightest, 25%); 
+		transition: all .1s;
+	}
+}
+
+.btn__like.liked { 
+	i { color: $gray-light; }
+}
+
+.btn__like::before {
+	content: '';
+	position: absolute;
+	left: -47px;
+	
+	display: inline-flex;
+	width: 45px;
+	height: 22px;
+	
+	pointer-events: none;
+	background: url('../img/likes.png') center no-repeat;
+}
+
+.btn__primary {
+	@include button-variant(#fff, #4561b4, #4561b4);	
+	@include button-size( .75rem, 1.25rem, .8rem, 5px);
+	
+	display: inline-flex;
+	letter-spacing: 1.5px;
+	
+	i { 
+		margin-right: 5px;
+		color: $white;
+	}	
+}
+
+.btn__social {
+	@include button-variant(#8a8d8f, #fff, transparent);	
+	@include button-size( 1rem, 0, .8rem, 0 0 12px 12px);
+	
+	letter-spacing: 1.5px;
+	border-top-color: $card-border-color;
+}
+
+
+
+// BUTTONS_HOVER
+.btn__icon:hover {
+	i {	color: $white; }
+}
+
+.btn__social:hover {
+	background: $white;
+	border-color: $card-border-color;
+	box-shadow: inset 0 0 0 2px  $card-border-color;
+}

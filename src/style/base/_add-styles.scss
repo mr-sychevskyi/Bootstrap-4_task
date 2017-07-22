@@ -1,0 +1,90 @@
+// FONTS
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/ProximaNova/ProximaNova-Regular.woff') format('woff'),
+		 url('../fonts/ProximaNova/ProximaNova-Regular.eot') format('embedded-opentype'),
+    	 url('../fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff'),
+	   url('../fonts/ProximaNova/ProximaNova-Bold.eot') format('embedded-opentype'),
+       url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+	font-family: 'AngleciaPro';
+  	src: url('../fonts/AngleciaPro/AngleciaProDisplay-Regular-webfont.woff') format('woff'),
+	   url('../fonts/AngleciaPro/AngleciaProDisplay-Regular-webfont.woff2'), format('woff2');
+  	font-style: normal;
+  	font-weight: 400;
+}
+
+
+// COMMON__STYLES
+body { font-family: 'ProximaNova', sans-serif; }
+
+.text-light { color: $white; }
+
+.right { float: right; }
+
+a { transition: all .4s; }
+
+a:hover, 
+button:hover { cursor: pointer; }
+
+button, 
+button:active, 
+button:focus { outline: none; }
+
+
+/* ANIMATED__NAVBAR-TOGGLER */
+.navbar-toggler .icon-bar:nth-of-type(1) {
+	transform: translate3d(0,6px,0);
+}
+
+.navbar-toggler .icon-bar:nth-of-type(3) {
+	transform: translate3d(0,-6px,0);
+}
+
+.navbar-toggler.collapsed .icon-bar:nth-of-type(1) {
+	transform: translate3d(0,0,0) rotate(0deg);
+}
+
+.navbar-toggler.collapsed .icon-bar:nth-of-type(2) {
+	transform: translate3d(0,0,0) rotate(0deg);
+}
+
+.navbar-toggler.collapsed .icon-bar:nth-of-type(3) {
+	transform: translate3d(0,0,0) rotate(0deg);
+}
+/* END ANIMATED MINUS */
+
+
+// SCROLLING
+.scroll-down {
+	background: $white;
+	
+	* { color: rgba($black, .6); }
+	border-bottom: 1px solid $gray-lightest;
+	
+	.header__top-form .form-control {
+		border: 1px solid rgba($black, .6);
+		color: $black;
+		&::placeholder { color: rgba($black, .6); }  
+	}
+	
+	.btn__icon { i { color: rgba($black, .6); } } 
+	.btn__icon:hover { i { color: rgba($black, .2); } } 
+}
+
+.fix-t {
+	position: fixed;
+	top: 60px;
+	width: 100%;
+}

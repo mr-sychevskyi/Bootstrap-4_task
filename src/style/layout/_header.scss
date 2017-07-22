@@ -1,0 +1,57 @@
+.header {
+    background: url('../img/bg.png') center no-repeat;
+    background-size: cover;
+	
+	&__top {
+		transition: all .5s ease;
+
+		&-form {
+			position: relative;
+			max-width: 240px;
+			
+			.form-control {
+				padding: 5px 15px;
+				padding-right: 25px;
+
+				background: $white-transparent;
+				border: 1px solid $white-semitransparent;
+				border-radius: 8px;
+
+				color: #fff;
+				&::placeholder { color: $white-semitransparent; }
+			}
+		}
+		
+		&-brand {
+			&:hover { color: $white; }
+			.brand__logo { transition: all .4s; }
+			.brand__title { letter-spacing: 0.2em; }
+		}
+	}
+	
+	
+	&__body {
+		.user-profile__link {
+			display: inline-flex;
+			width: 90px;
+			height: 90px;
+
+			border-radius: 50%;
+			border: 2px solid $white;
+						
+			&:hover {
+				img { animation: user 1s ease-in-out forwards; }
+				
+				@keyframes user {
+					30%   { transform: rotate(15deg) scale(0.9); }
+
+					60%  { transform: rotate(15deg); }
+
+					100% { transform: rotate(0deg) scale(1); }
+				}
+			}
+		}
+		
+		.user-profile__name { letter-spacing: 0.1em; }
+	}
+}
