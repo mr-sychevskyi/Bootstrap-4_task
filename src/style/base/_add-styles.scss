@@ -79,8 +79,8 @@ button:focus { outline: none; }
 		&::placeholder { color: rgba($black, .6); }  
 	}
 	
-	.btn__icon { i { color: rgba($black, .6); } } 
-	.btn__icon:hover { i { color: rgba($black, .2); } } 
+	.btn__search { i { color: rgba($black, .6); } } 
+	.btn__search:hover { i { color: rgba($black, .2); } } 
 }
 
 .fix-t {
